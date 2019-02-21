@@ -3,7 +3,7 @@
  * @LastEditors: kai.yang
  * @Description: 首页
  * @Date: 2019-02-19 21:00:02
- * @LastEditTime: 2019-02-21 15:01:51
+ * @LastEditTime: 2019-02-21 20:48:46
  -->
 <template>
   <div class="home">
@@ -44,7 +44,7 @@ export default {
   methods: {
     getMath () {
       debugger
-      ewfwf
+      ewfw
     }
   }
 }
