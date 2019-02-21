@@ -3,7 +3,7 @@
  * @LastEditors: kai.yang
  * @Description: 首页
  * @Date: 2019-02-19 21:00:02
- * @LastEditTime: 2019-02-21 14:56:11
+ * @LastEditTime: 2019-02-21 14:58:45
  -->
 <template>
   <div class="home">
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'Home2',
+  name: 'Home',
 
   components: {
   },
