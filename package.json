@@ -9,6 +9,7 @@
     "dev": "webpack-dev-server --open --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --fix --ext .js,.vue src",
+    "lint-prod": "eslint -c ./.eslintrc_prod.js --ext .js,.vue src",
     "build": "node build/build.js",
     "precommit": "lint-staged"
   },
@@ -90,11 +91,11 @@
   ],
   "lint-staged": {
     "src/**/*.js": [
-      "eslint -c ./.eslintrc_prod.js --ext",
+      "eslint -c ./.eslintrc_prod.js",
       "git add"
     ],
     "src/**/*.vue": [
-      "eslint -c ./.eslintrc_prod.js --ext",
+      "eslint -c ./.eslintrc_prod.js --fix",
       "git add"
     ]
   }
