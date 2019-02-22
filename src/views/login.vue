@@ -3,7 +3,7 @@
  * @LastEditors: kai.yang
  * @Description: 登录页
  * @Date: 2019-02-19 21:00:05
- * @LastEditTime: 2019-02-20 11:05:33
+ * @LastEditTime: 2019-02-21 20:51:27
  -->
 <template>
   <div class="scss">
@@ -39,6 +39,7 @@ export default {
   },
 
   mounted () {
+
   },
 
   methods: {

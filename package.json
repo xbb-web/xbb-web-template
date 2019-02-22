@@ -24,6 +24,8 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
     "@kazupon/vue-i18n-loader": "^0.3.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
@@ -89,13 +91,18 @@
     "last 2 versions",
     "not ie <= 8"
   ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
   "lint-staged": {
     "src/**/*.js": [
-      "eslint --fix",
+      "eslint -c ./.eslintrc_prod.js --fix",
       "git add"
     ],
     "src/**/*.vue": [
-      "eslint --fix",
+      "eslint -c ./.eslintrc_prod.js --fix",
       "git add"
     ]
   }
