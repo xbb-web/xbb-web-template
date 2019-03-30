@@ -2,7 +2,7 @@
  * @Author: xuwang.bao
  * @Date: 2019-01-07 17:16:53
  * @LastEditors: kai.yang
- * @LastEditTime: 2019-02-20 13:53:19
+ * @LastEditTime: 2019-03-30 15:33:47
  * @Description: axios 实例配置
  */
 
@@ -22,23 +22,19 @@ const http = axios.create({
   headers: {
     'Content-Type': 'application/json;charset=UTF-8',
     'sign': '123'
-  },
-  data: {
-    corpid: '1',
-    userId: vueCookie.get('userId') || '1',
-    platform: 'web',
-    frontDev: '1'
   }
 })
-http.defaults.headers.common['Content-Type'] = 'application/json;charset=UTF-8'
 // 添加请求拦截器
 http.interceptors.request.use(
   config => {
-    // 在发送请求之前做些什么
-
-    // if (store.getters.token) {
-    //   config.headers['X-Token'] = getToken() // 让每个请求携带token--['X-Token']为自定义key 请根据实际情况自行修改
-    // }
+    const data = {
+      ...config.data,
+      corpid: vueCookie.get('corpid') || '1',
+      userId: vueCookie.get('userId') || '1',
+      frontDev: '1',
+      platform: 'web'
+    }
+    config.data = data
 
     return config // 此处切记记得将请求参数return出去
   },
