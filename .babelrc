@@ -13,7 +13,7 @@
       "component",
       {
         "libraryName": "element-ui",
-        "style": "theme-chalk"
+        "styleLibraryName": "theme-chalk"
       }
     ]
   ]

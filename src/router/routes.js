@@ -9,7 +9,7 @@ export default [
     meta: {
       pathName: '主页'
     },
-    component: resolve => require(['@/views/home'], resolve)
+    component: () => import(/* webpackChunkName: "home" */ '@/views/home')
   },
   {
     path: '/login',
@@ -18,6 +18,6 @@ export default [
       pathName: '用户登录',
       ignoreAuth: true
     },
-    component: resolve => require(['@/views/login'], resolve)
+    component: () => import(/* webpackChunkName: "login" */ '@/views/login')
   }
 ]
